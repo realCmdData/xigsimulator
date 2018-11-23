@@ -56,9 +56,11 @@ client.on('message', message => {
         `Are you under 13? uwu`,
         `:weary:`,
         `No u`,
+        `um`,
         `:weary::weary::weary::weary::weary:`,
         `:weary::weary::weary::weary::weary::weary::weary::weary:`,
-        `:regional_indicator_u: :regional_indicator_w: :regional_indicator_u:`
+        `:regional_indicator_u: :regional_indicator_w: :regional_indicator_u:`,
+        `xd`
 
     ]
     const modlog = [
