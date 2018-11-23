@@ -1,10 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const TOKEN = 'NTEwNTA2ODI4MDMxODUyNTU1.Dtm3tA.raT1UgNC6-2FDhsqy2Rbqm39JTM';
-const PREFIX = 'xig ';
-const OWNER = '99787644430475264'
-const MENTION = '@Xiggy Simulator#3047 '
-const EMBEDCOLOUR = 'f44444'
+const { TOKEN, PREFIX, OWNER, EMBEDCOLOUR} = require('./config.js');
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
