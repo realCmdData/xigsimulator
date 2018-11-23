@@ -24,7 +24,6 @@ client.on('message', message => {
         `uwu`,
         `<:blureyes:515560048672636929>`,
         `What the fuck that's gay`,
-        `Furries should all die smh. Especially you ${message.author}`,
         `>:(`,
         `<:yes:515560787985563668>`,
         `Fuck off ${message.author}`,
@@ -199,6 +198,10 @@ client.on('message', message => {
     if (message.content.toLowerCase().startsWith(PREFIX)) {
         let txt = responses[Math.floor(Math.random() * responses.length)];
         message.channel.send(`${txt}`)
+    }
+
+    if (message.content.toLowerCase().startsWith(PREFIX + "github")) {
+        return message.channel.send("This shit top-secret k? Don't give it to the evil marco_rennmaus. The Discord Trust & Saftey team have tried to detain him, but failed. He is still roamind around the channels.... \n ")
     }
 })
 
