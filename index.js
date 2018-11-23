@@ -60,7 +60,8 @@ client.on('message', message => {
         `:weary::weary::weary::weary::weary:`,
         `:weary::weary::weary::weary::weary::weary::weary::weary:`,
         `:regional_indicator_u: :regional_indicator_w: :regional_indicator_u:`,
-        `xd`
+        `xd`,
+        `Why is it so big ${message.author}?`
 
     ]
     const modlog = [
