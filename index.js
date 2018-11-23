@@ -203,11 +203,11 @@ client.on('message', message => {
     }
 
     if (message.content.toLowerCase().startsWith(PREFIX + "github")) {
-        return message.channel.send("This shit top-secret k? Don't give it to the evil marco_rennmaus. The Discord Trust & Saftey team have tried to detain him, but failed. He is still roamind around the channels.... \n https://github.com/realCmdData/xigsimulator")
+        return message.channel.send("This shit top-secret k? Don't give it to the evil marco_rennmaus. The Discord Trust & Saftey team have tried to detain him, but failed. He is still roamind around the channels.... \n https://github.com/realCmdData/xigsimulator");
     }
 
     if (message.content.toLowerCase().startsWith(PREFIX + "owner")) {
-        return message.channel.send("My owner is **CmdData#0101** give him sum cookies pls")
+        return message.channel.send("My owner is **CmdData#0101** give him sum cookies pls");
     }
 })
 
