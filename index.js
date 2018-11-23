@@ -118,6 +118,8 @@ client.on('message', message => {
             .addField(`${PREFIX}help`, "Sends this message")
             .addField(`${PREFIX}modlog`, "Sends a mod-log case")
             .addField(`${PREFIX}simulators`, "Shows other DBL simulators you'd like!")
+            .addField(`${PREFIX}github`, "See my inner workings uwu")
+            .addField(`${PREFIX}owner`, "Who made me?")
             .addField(`${PREFIX}invite`, "Sends the invite link")
             .addField(`${PREFIX}ping`, "Sends ping")
             .addField(`${PREFIX}[xiggy/xig/xignotic]`, "Who fucking said my name?")
@@ -201,7 +203,11 @@ client.on('message', message => {
     }
 
     if (message.content.toLowerCase().startsWith(PREFIX + "github")) {
-        return message.channel.send("This shit top-secret k? Don't give it to the evil marco_rennmaus. The Discord Trust & Saftey team have tried to detain him, but failed. He is still roamind around the channels.... \n ")
+        return message.channel.send("This shit top-secret k? Don't give it to the evil marco_rennmaus. The Discord Trust & Saftey team have tried to detain him, but failed. He is still roamind around the channels.... \n https://github.com/realCmdData/xigsimulator")
+    }
+
+    if (message.content.toLowerCase().startsWith(PREFIX + "owner")) {
+        return message.channel.send("My owner is **CmdData#0101** give him sum cookies pls")
     }
 })
 
