@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const { TOKEN, PREFIX, OWNER, EMBEDCOLOUR} = require('./config.js');
+const { TOKEN, PREFIX, OWNER, EMBEDCOLOUR } = require('./config.js');
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -92,11 +92,7 @@ client.on('message', message => {
 
     if (message.content.toLowerCase().startsWith(PREFIX + "maincolor")) {
         var sightengine = require('sightengine')('1993717849', 'oKykg9ZZaoL5kNMeH36a')
-        sightengine.check(['properties']).set_url('http://xiggy-is-in.the-lewd.club/i/88gol.png').then(function(result){
-        }); {
-            return message.channel.send(result);
-        }
-        
+        sightengine.check(['properties']).set_url('http://xiggy-is-in.the-lewd.club/i/88gol.png').then(message.channel.send(result));
     }
 
     if (message.content.toLowerCase().startsWith(PREFIX + "github")) {
@@ -118,7 +114,7 @@ client.on('message', message => {
     if (message.content.toLowerCase().startsWith(PREFIX + "xignotic")) {
         return message.channel.send("What do you want uwu");
     }
-    
+
     if (message.content.toLowerCase().startsWith(PREFIX + "xig")) {
         return message.channel.send("What do you want uwu");
     }
@@ -147,15 +143,15 @@ client.on('message', message => {
     }
 
     if (message.content.toLowerCase().startsWith(PREFIX + "simulators")) {
-            var embed = new Discord.RichEmbed()
-                .setTitle(`So i'm not good enough eh? Here are some more simulators!`)
-                .setThumbnail("https://cdn.discordapp.com/emojis/493035193246941199.png?v=1")
-                .addField(`Jonny Simulator`, "https://discordbots.org/bot/513875565447741440")
-                .addField(`Oliy Simulator`, "https://discordbots.org/bot/500954344510980136")
-                .addField(`DBL Simulator 2`, "https://discordbots.org/bot/513814680662179857")
-                .setColor(EMBEDCOLOUR)
-                .setTimestamp()
-            return message.channel.sendEmbed(embed);
+        var embed = new Discord.RichEmbed()
+            .setTitle(`So i'm not good enough eh? Here are some more simulators!`)
+            .setThumbnail("https://cdn.discordapp.com/emojis/493035193246941199.png?v=1")
+            .addField(`Jonny Simulator`, "https://discordbots.org/bot/513875565447741440")
+            .addField(`Oliy Simulator`, "https://discordbots.org/bot/500954344510980136")
+            .addField(`DBL Simulator 2`, "https://discordbots.org/bot/513814680662179857")
+            .setColor(EMBEDCOLOUR)
+            .setTimestamp()
+        return message.channel.sendEmbed(embed);
     }
 
     if (message.content.toLowerCase().startsWith(PREFIX + "eval")) {
@@ -212,7 +208,7 @@ client.on('message', message => {
             .setColor(color)
         return message.channel.sendEmbed(embed);
     }
-    
+
     if (message.content.toLowerCase().startsWith(PREFIX)) {
         let txt = responses[Math.floor(Math.random() * responses.length)];
         message.channel.send(`${txt}`)
