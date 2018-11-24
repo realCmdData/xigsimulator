@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const fetch = require('node-fetch');
+const URL = 'http://xiggy-is-in.the-lewd.club/i/a6ebm.png';
 const { TOKEN, PREFIX, OWNER, EMBEDCOLOUR } = require('./config.js');
 
 client.on('ready', () => {
@@ -95,6 +97,12 @@ client.on('message', message => {
         sightengine.check(['properties']).set_url('http://xiggy-is-in.the-lewd.club/i/88gol.png').then(message.channel.send(result));
     }
 
+    if (message.content.toLowerCase().startsWith(PREFIX + "testcolor")) {
+        fetch(`https://api.sightengine.com/1.0/check.json?api_user=1993717849&api_secret=oKykg9ZZaoL5kNMeH36a&models=properties&url=${URL}`)
+            .then(res => res.json($.colors.dominant.hex))
+        return message.channel.send(res);
+    }
+
     if (message.content.toLowerCase().startsWith(PREFIX + "github")) {
         return message.channel.send("This shit top-secret k? Don't give it to the evil marco_rennmaus. The Discord Trust & Saftey team have tried to detain him, but failed. He is still roaming around the channels.... \n https://github.com/realCmdData/xigsimulator");
     }
@@ -121,6 +129,10 @@ client.on('message', message => {
 
     if (message.content.toLowerCase().startsWith(PREFIX + "ur a qt")) {
         return message.channel.send(":weary: uwu");
+    }
+
+    if (message.content.toLowerCase().startsWith(PREFIX).endsWith("sim when")) {
+        return message.channel.send("<:nevertm:515874895826255883>");
     }
 
     if (message.content.toLowerCase().startsWith(PREFIX + "help")) {
