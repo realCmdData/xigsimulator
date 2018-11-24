@@ -92,13 +92,10 @@ client.on('message', message => {
 
     if (message.content.toLowerCase().startsWith(PREFIX + "maincolor")) {
         var sightengine = require('sightengine')('1993717849', 'oKykg9ZZaoL5kNMeH36a')
-        sightengine.check(['properties']).set_url('tempVars("url")').then(function(result))
-        return message.channel.send(result);
+        sightengine.check(['properties']).set_url('tempVars("url")').then(function(result)){
+            return message.channel.send(result);
         }
-
-});
-  
-        return message.channel.send("This shit to");
+        
     }
 
     if (message.content.toLowerCase().startsWith(PREFIX + "github")) {
