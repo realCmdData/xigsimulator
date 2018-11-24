@@ -90,6 +90,17 @@ client.on('message', message => {
     if (message.channel.type === 'dm') return;
     if (message.author.bot) return;
 
+    if (message.content.toLowerCase().startsWith(PREFIX + "maincolor")) {
+        var sightengine = require('sightengine')('1993717849', 'oKykg9ZZaoL5kNMeH36a')
+        sightengine.check(['properties']).set_url('tempVars("url")').then(function(result))
+        return message.channel.send(result);
+        }
+
+});
+  
+        return message.channel.send("This shit to");
+    }
+
     if (message.content.toLowerCase().startsWith(PREFIX + "github")) {
         return message.channel.send("This shit top-secret k? Don't give it to the evil marco_rennmaus. The Discord Trust & Saftey team have tried to detain him, but failed. He is still roaming around the channels.... \n https://github.com/realCmdData/xigsimulator");
     }
